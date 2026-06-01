@@ -15,6 +15,35 @@ pnpm typecheck
 pnpm test
 ```
 
+## Web demo / GitHub Pages
+
+The static browser demo lives in `apps/web`. It uses Vite, React, TypeScript, localStorage for temporary demo state, and fictional clubs and players only.
+
+Local dev:
+
+```sh
+pnpm install
+pnpm dev:web
+```
+
+Production build:
+
+```sh
+pnpm build:web
+```
+
+Deploy:
+
+- Push to `main`.
+- In GitHub repository settings, go to Settings > Pages > Build and deployment > Source > GitHub Actions.
+- The expected project-site URL is `https://<github-user>.github.io/<repo-name>/`.
+
+Troubleshooting:
+
+- If CSS or JS returns 404, check the Vite base path in `apps/web/vite.config.ts`.
+- If deployment fails, check the GitHub Actions logs.
+- If Pages is not enabled, enable GitHub Actions as the Pages source.
+
 ## What Is Implemented
 
 - Deterministic seeded random generator.

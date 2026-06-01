@@ -1,3 +1,6 @@
+export const ENGINE_PACKAGE_NAME = "@kleague-manager/engine";
+export const ENGINE_VERSION = "0.1.0";
+
 export * from "./models/club.js";
 export * from "./models/player.js";
 export * from "./models/tactic.js";

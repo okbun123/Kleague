@@ -4,10 +4,13 @@
   "private": true,
   "packageManager": "pnpm@9.15.4",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "build": "pnpm -r build",
+    "build:web": "pnpm --filter @kleague-manager/engine build && pnpm --filter @kleague-manager/web build",
+    "dev:web": "pnpm --filter @kleague-manager/engine build && pnpm --filter @kleague-manager/web dev",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck"
   },
